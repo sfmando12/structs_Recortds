@@ -1,0 +1,86 @@
+#include <iostream>
+using namespace std;
+enum Trafficlights {
+    GREEN = 1,
+    YELLOW,
+    RED
+};
+enum difficulty {
+    EASY = 1,
+    MEDIUM,
+    HARD,
+};
+
+
+enum Day {
+    MON = 1,
+    TUE,
+    WED,
+    THU,
+    FRI,
+    SAT,
+    SUN
+};
+
+int main() {
+    difficulty diff = EASY;
+    Trafficlights t = YELLOW;
+    Day d = FRI;
+
+    cout << "numeric value: " << d << endl;
+    cout << "Today is ";
+    switch (d) {
+        case MON:
+            cout << "Monday" << endl;
+            break;
+        case TUE:
+            cout << "Tuesday" << endl;
+            break;
+        case WED:
+            cout << "Wednesday" << endl;
+            break;
+        case THU:
+            cout << "Thursday" << endl;
+            break;
+        case FRI:
+            cout << "Friday" << endl;
+            break;
+        case SAT:
+            cout << "Saturday" << endl;
+            break;
+        case SUN:
+            cout << "Sunday" << endl;
+            break;
+    }
+
+    cout << "current light: " << t << endl;
+    switch (t) {
+        case RED:
+            cout << "stop!" << endl;
+            break;
+        case GREEN:
+           cout << "Go!" << endl;
+            break;
+        case YELLOW:
+            cout << "Slow down!" << endl;
+            break;
+    }
+
+    cout << "Choose your difficulty: ";
+    int choice;
+    cin >> choice;
+    switch (choice) {
+        case EASY:
+            cout << "you chose easy difficulty";
+            break;
+            case MEDIUM:
+            cout << "you chose medium difficulty";
+            break;
+            case HARD:
+            cout << "you chose hard difficulty";
+            break;
+
+    }
+
+
+}
